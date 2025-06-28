@@ -1,10 +1,14 @@
 
-# 🎯 Multi-View Player Tracking with YOLOv11 & DeepSORT
+# 🎯 Multi-View Player Tracking with YOLOv11 with DeepSORT and RESNET50
 
-This project implements a high-performance multi-view player tracking pipeline using a fine-tuned YOLOv11 model and DeepSORT. It is capable of detecting and tracking players across multiple camera angles — such as broadcast and tacticam feeds — with consistent ID assignment and exportable tracking metadata.
+This project implements a high-performance multi-view player tracking pipeline using a fine-tuned YOLOv11 model with Deepsort and Resnet50. It is capable of detecting and tracking players across multiple camera angles — such as broadcast and tacticam feeds — with consistent ID assignment and exportable tracking metadata.
 
 ---
+## Accuracy
+YOLOv11 Detection Accuracy (Tracked Detection Rate): 28.89%
+ResNet-50 Feature Consistency Accuracy (Average): 99.70%
 
+ ---
 ## 🧠 Overview
 
 The goal is to identify and track all players in real-time across two synchronized football match videos. Each detected player is assigned a consistent ID which persists across frames. The system outputs both annotated video and structured JSON logs for downstream analytics, tactical modeling, or video indexing.
@@ -42,6 +46,8 @@ This work is optimized for GPU execution (e.g., Google Colab, CUDA-enabled syste
 
 # DeepSORT (lightweight version)
 !pip install deep_sort_realtime
+!pip install ultralytics
+!pip install opencv-python-headless
 \`\`\`
 
 ### 2. Load Model
