@@ -36,33 +36,9 @@ This work is optimized for GPU execution (e.g., Google Colab, CUDA-enabled syste
 
 ---
 
-## 📁 Directory Layout
-
-\`\`\`bash
-.
-├── broadcast.mp4                 # Input broadcast video
-├── tacticam.mp4                  # Input top-down or tactical view
-├── best.pt                       # Fine-tuned YOLOv11 weights
-├── tracker.py                    # Core tracking script
-├── /output/
-│   ├── broadcast_tracked.mp4     # Output annotated video
-│   ├── broadcast_tracks.json     # Frame-by-frame tracking data
-│   ├── tacticam_tracked.mp4
-│   └── tacticam_tracks.json
-└── README.md
-\`\`\`
-
----
-
 ## 📦 Setup Instructions (Colab / Local GPU)
 
 ### 1. Install Dependencies
-
-\`\`\`bash
-# YOLOv11 (Ultralytics)
-!git clone https://github.com/ultralytics/ultralytics
-%cd ultralytics
-!pip install -e .
 
 # DeepSORT (lightweight version)
 !pip install deep_sort_realtime
@@ -72,7 +48,7 @@ This work is optimized for GPU execution (e.g., Google Colab, CUDA-enabled syste
 
 \`\`\`python
 from ultralytics import YOLO
-model = YOLO('/content/drive/MyDrive/internship/best.pt')  # Your trained weights
+model = YOLO('best.pt')  # Your trained weights
 \`\`\`
 
 ---
@@ -87,7 +63,7 @@ from tracker import run_tracker
 run_tracker(
     video_path="/content/broadcast.mp4",
     model=model,
-    output_path_prefix="/content/drive/MyDrive/try2output/broadcast",
+    output_path_prefix="broadcast",
     upscale_to=(1920, 1080)  # Optional: high-res output
 )
 \`\`\`
@@ -155,9 +131,6 @@ This project is released under the MIT License. You may use, modify, and redistr
 Machine Learning Engineer | Computer Vision | Sports Analytics  
 _B.Tech. CSE | Specialization in AI & ML_
 
-📫 [LinkedIn](https://linkedin.com/in/adityatak) | [GitHub](https://github.com/your-username)
-
----
 
 ## ✅ Demo Ready
 
