@@ -140,5 +140,5 @@ _B.Tech. CSE | Specialization in AI & ML_
 
 ## ✅ Demo Ready
 
-📌 _Tested on NVIDIA T4 and A100 GPUs on Colab Pro_  
+📌 _Tested on NVIDIA T4 and A100 GPUs on Google Colab   
 📦 _End-to-end tracking on HD video under 2 minutes_
