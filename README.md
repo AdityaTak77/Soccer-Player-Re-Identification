@@ -5,7 +5,7 @@ This project implements a high-performance multi-view player tracking pipeline u
 
 ---
 ## Accuracy
-YOLOv11 Detection Accuracy (Tracked Detection Rate): 28.89%
+YOLOv11 Detection Accuracy (Tracked Detection Rate): 28.89%.
 ResNet-50 Feature Consistency Accuracy (Average): 99.70%
 
  ---
